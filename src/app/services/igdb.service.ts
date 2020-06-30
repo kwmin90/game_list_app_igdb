@@ -7,7 +7,7 @@ const requestOptions = {
   baseURL: 'https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/',
   headers: {
     Accept: "application/json",
-    "user-key": '9def9516985484e8c263c2e50a8972be',
+    "user-key": 'YOUR USER KEY FROM igdb.com/api',
     'X-Requested-With': 'XMLHttpRequest'
   },
   responseType: "json"
