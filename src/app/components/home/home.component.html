@@ -1,0 +1,21 @@
+<div class="container">
+    <h3 style="text-align:center;">Add your favorite games to the list to display it in the home page</h3>
+    <hr>
+    <div *ngIf="listExists==true;">
+        <div class="justify-content-center" fxLayout="row wrap" fxLayoutGap="1vh" fxLayoutAlign="flex-start">
+            <div *ngFor="let item of items | paginate: { itemsPerPage: 12, currentPage: p }">
+                <a routerLink="/game/{{item.id}}"><img src="{{item.cover.url.replace('t_thumb','t_cover_big')}}"></a>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="listExists==false;">
+        <div class="justify-content-center" fxLayout="row wrap" fxLayoutGap="1vh" fxLayoutAlign="flex-start">
+            <div *ngFor="let item of defaultItems | paginate: { itemsPerPage: 12, currentPage: p }">
+                <a routerLink="/game/{{item.id}}"><img src="{{item.cover.url.replace('t_thumb','t_cover_big')}}"></a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>

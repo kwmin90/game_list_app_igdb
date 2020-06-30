@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <img src="{{item && item[0].cover.url.replace('t_thumb','t_cover_big')}}">
+        </div>
+        <div class="col-sm-12 col-md-8">
+            <h3>{{item && item[0].name}}</h3>
+            <p><b>Genres: </b>
+                <span *ngFor="let genre of genres; let isLast=last">
+                    {{genre && genre.name}}{{isLast? '':', '}}
+                </span>
+            </p>
+            <p><b>Platforms: </b>
+                <span *ngFor="let platform of platforms; let isLast=last">
+                    {{platform && platform.name}}{{isLast? '':', '}}
+                </span>
+            </p>
+            <p>{{item && item[0].summary}}</p>
+            <button (click)="storeInLocalStorage(item && item[0].id)">Store</button>
+        </div>
+    </div>
+</div>

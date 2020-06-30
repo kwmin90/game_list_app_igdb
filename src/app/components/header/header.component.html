@@ -1,0 +1,6 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" routerLink="home">Home</a>
+            <input class="form-control mr-sm-2" type="search" [(ngModel)]="query" (keyup.enter)="navigateToSearch(query)" placeholder="Search your favorite games" aria-label="Search">
+      </nav>
+</div>
