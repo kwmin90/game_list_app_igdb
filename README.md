@@ -6,4 +6,4 @@ Built using: Angular, ngx-pagination, IGDB API
 
 Allows users to search for games and add them to a list displayed in the home page.
 The home page will be overwritten with the games added by the user.
-The initial list is my favorite games :)
+The initial list contains my favorite games :)
